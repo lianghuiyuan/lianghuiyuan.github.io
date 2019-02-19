@@ -45,7 +45,7 @@ p, div {
 }
 
 #bio > div > span {
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 #bio p {
@@ -56,7 +56,7 @@ p, div {
 h1 {
   font-weight: bold;
   color: white;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: 13px;
   margin-bottom: 0px;
 }
