@@ -110,7 +110,7 @@
                 <div class="section-text col-right">
                     <div class="row">
                         <div class="col">
-                            <h3>K8S容器开发 - 深圳市睿云智合科技有限公司</h3>
+                            <h3>WiseCloud - 深圳市睿云智合科技有限公司</h3>
                         </div>
                     </div>
                     <div class="row subsection">
@@ -121,7 +121,7 @@
                         <li>容器开发工程师: wisecloud是为客户定制化开发基于K8S的多K8S集群管理云平台</li>
                           <ul classs="desc">
                             <li>K8S容器监控中间件开发</li>
-                            <span class="desc">WiseCloud前端有一套自定义的dashboard，通过开发中间件Metrics从prometheus获取指标数据在dashboard中展示，同时在前端可以设置弹性伸缩监控，当资源超过限制阀值时自动触发中间件auto-scaling对pods进行扩容和缩容</span>
+                            <span class="desc">WiseCloud前端有一套自定义的dashboard，通过开发中间件Metrics从prometheus获取指标数据在dashboard中展示，同时在前端可以设置弹性伸缩监控，告警信息Alert由中间件monitor-api生成，且弹性伸缩由Alert中的webhook触发，当资源超过限制阀值时自动触发中间件auto-scaling对pods进行扩容和缩容</span>
                             <li>多K8S监控时序数据库方案</li>
                             <span class="desc">prometheus使用的是promql时序数据库，在多集群方案中，为了统一管理和展示多k8s集群的监控数据，引入OpenTSDB时序数据库对子k8s的promql数据进行收集存储</span>
                             <li>将自定义的kube-dns替换为K8s原生core-dns</li>
