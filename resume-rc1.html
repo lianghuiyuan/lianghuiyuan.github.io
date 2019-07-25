@@ -21,12 +21,12 @@
                 <h2 class="col">Interests</h2>
                 <div class="section-text col-right">
                   <span class="key">Kubernetes</span>
-                  <span class="key">Istio</span>
                   <span class="key">Prometheus</span>
                   <span class="key">Golang</span>
                   <span class="key">Java</span>
                   <span class="key">DevOps</span>
-                  <span class="key">KubeEdge</span>
+                  <span class="key">K3S</span>
+                  <span class="key">K3OS</span>
                   <span class="key">IoT物联网</span>
                 </div>
             </div>
@@ -60,8 +60,7 @@
                 <h2 class="col">Skills</h2>
                 <div class="section-text col-right row">
                     <ul class="skills">
-                        <li>熟练操作Kubernetes集群，熟练使用kubectl，minikube等工具, 使用Api管理k8s资源</li>
-                        <li>熟悉Service Mesh服务网格，掌握Istio Gateway, VirtualService, DestinationRule, ServiceEntry配置</li>
+                        <li>熟练操作Kubernetes集群，熟练使用kubectl，minikube等工具</li>
                         <li>擅长Kubernetes监控，熟悉容器监控原理, 熟练cAdvisor, node_exporter等</li>
                         <li>熟练操作Prometheus，Grafana等监控软件操作</li>
                         <li>熟悉时序数据库OpenTSDB，PromQL等</li>
@@ -78,7 +77,7 @@
                         <li>熟悉Zabbix/Prometheus服务监控及报警(短信、微信、邮件)</li>
                         <li>熟悉阿里云产品，ECS管理及运维系统基础服务</li>
                         <li>熟悉Spring-boot/Spring-cloud框架</li>
-                        <li>熟悉ELK日志监控</li>
+                        <li>了解ELK日志监控</li>
                         <li>了解并使用KVM, VBox, VMware, Vagrant等虚拟技术</li>
                         <li>具有移动App(Android&IOS&Codova) 开发经验</li>
                     </ul>
@@ -112,50 +111,14 @@
                 <div class="section-text col-right">
                     <div class="row">
                         <div class="col">
-                            <h3>H3BPM - 深圳市奥哲网络科技有效公司</h3>
-                        </div>
-                    </div>
-                    <div class="row subsection">
-                        <div class="emph col">系统开发工程师</div>
-                        <div class="col-right light">2019年06月 - 至今</div>
-                    </div>
-                    <ul class="desc">
-                        <li>基础架构组</li>
-                          <ul classs="desc">
-                            <li>使用K8S API管理Istio 路由服务IstioIngressApi(Spring)</li>
-                            <span class="desc"> 控制Istio 的Ingress路由资源有：Gateway,VirtualService, DestinationRule, ServiceEntry和Sidecar(Istio1.1新增),IstioIngressApi服务是提供接口给管理平台对Istio 的Ingress资源进行增删改查功能，管理集群的网络。</span>
-                            <li>日志消费聚合服务(Spring)</li>
-                            <span class="desc"> 该服务通过消费存储在其他公有云(eg:aliyun)的日志，以聚合日志给管理平台统一查询展示和搜索</span>
-                            <li>制定日志方案</li>
-                            <span class="desc"> 结合公司业务场景，制定符合需求的日志方案。分别研究了ELK，EFK，Loki，TailLog以及通过API聚合日志等方案，最终确定通过API实现日志聚合并提供查询能力的接口。</span>
-                          </ul>
-                    </ul>
-                </div>
-                <div class="section-text col-right">
-                    <div class="row">
-                        <div class="col">
                             <h3>物联网 - 深圳市摩仑科技有限公司</h3>
                         </div>
                     </div>
                     <div class="row subsection">
                         <div class="emph col">软件工程师&运维工程师</div>
-                        <div class="col-right light">2015年01月 - 2019年02月</div>
+                        <div class="col-right light">2015年01月 - 2019年03月</div>
                     </div>
                     <ul class="desc">
-                        <li>软件工程师: Java开发，Go语言开发, Android App, IOS App, Codova混合App</li>
-                          <ul classs="desc">
-                            <li>K8S容器监控中间件开发</li>
-                            <span class="desc"> wisecloud是为客户定制化开发基于K8S的多K8S集群管理云平台, 其前端有一套自定义的dashboard，通过开发中间件Metrics从prometheus获取指标数据在dashboard中展示，同时在前端可以设置弹性伸缩监控，告警信息Alert由中间件monitor-api生成，且弹性伸缩由Alert中的webhook触发，当资源超过限制阀值时自动触发中间件auto-scaling对pods进行扩容和缩容</span>
-                            <li>多K8S监控时序数据库方案</li>
-                            <span class="desc">prometheus使用的是promql时序数据库，在多集群方案中，为了统一管理和展示多k8s集群的监控数据，引入OpenTSDB时序数据库对子k8s的promql数据进行收集存储</span>
-                            <li>将自定义的kube-dns替换为K8s原生core-dns</li>
-                            <span class="desc">WiseCloud项目前期设计上引入了stack概念将来管理k8s的deployment，并以stack与其他字符自定义namespace，且service名也由stack拼装而成，如此导致k8s中如果通过dns访问servicename访问服务的时候必须加入stack字段，在本次产品升级中去掉stackname，将自定义的kube-dns替换为k8s原生core-dns，此过程熟练掌握了dns路由规则及问题排查方法</span>
-                            <li>IntoYun平台第三方接入服务demo(Golang)</li>
-                            <span class="desc">使用Golang实现IntoYun平台提供的第三方API，实现第三方接入的Demo</span>
-                            <li>IntoYun平台RabbitMQ消费者服务(Golang)</li>
-                            <li>IntoYun平台Kafka消费者服务(Golang)</li>
-                            <li>IntoRobot App(Android & IOS & Codova v0.9版)</li>
-                          </ul>
                         <li>运维工程师: Ansible脚本自动化部署服务，Zabbix/Prometheus服务监控及报警(短信、微信、邮件), ELK日志监控</li>
                           <ul classs="desc">
                             <li>基础服务自动化运维</li>
@@ -166,6 +129,20 @@
                             <span class="desc">前期使用Zabbix对服务进行监控，后期容器化程度提高后，改为Prometheus对服务进行监控，同时配合使用aliyun的云监控对服务器基础设施和站点进行监控</span>
                             <li>业务迁移</li>
                             <span class="desc">实施了一次IntoYun和IntoRobot平台在aliyun从经典网络到VPC网络的迁移，保证了数据的完整性和安全及不影响用户体验，顺利完成迁移</span>
+                          </ul>
+                        <li>软件工程师: Go语言开发, Android App, IOS App, Codova混合App</li>
+                          <ul classs="desc">
+                            <li>K8S容器监控中间件开发</li>
+                            <span class="desc">多K8S集群管理平台前端有一套自定义的dashboard，通过开发中间件Metrics从prometheus获取指标数据在dashboard中展示，同时在前端可以设置弹性伸缩监控，告警信息Alert由中间件monitor-api生成，且弹性伸缩由Alert中的webhook触发，当资源超过限制阀值时自动触发中间件auto-scaling对pods进行扩容和缩容</span>
+                            <li>多K8S监控时序数据库方案</li>
+                            <span class="desc">prometheus使用的是promql时序数据库，在多集群方案中，为了统一管理和展示多k8s集群的监控数据，引入OpenTSDB时序数据库对子k8s的promql数据进行收集存储</span>
+                            <li>将自定义的kube-dns替换为K8s原生core-dns</li>
+                            <span class="desc">多K8S集群管理平台项目前期设计上引入了stack概念将来管理k8s的deployment，并以stack与其他字符自定义namespace，且service名也由stack拼装而成，如此导致k8s中如果通过dns访问servicename访问服务的时候必须加入stack字段，在本次产品升级中去掉stackname，将自定义的kube-dns替换为k8s原生core-dns，此过程熟练掌握了dns路由规则及问题排查方法</span>
+                            <li>IntoYun平台第三方接入服务demo(Golang)</li>
+                            <span class="desc">使用Golang实现IntoYun平台提供的第三方API，实现第三方接入的Demo</span>
+                            <li>IntoYun平台RabbitMQ消费者服务(Golang)</li>
+                            <li>IntoYun平台Kafka消费者服务(Golang)</li>
+                            <li>IntoRobot App(Android & IOS & Codova v0.9版)</li>
                           </ul>
                     </ul>
                 </div>
