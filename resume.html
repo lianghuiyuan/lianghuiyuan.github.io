@@ -22,12 +22,12 @@
                 <div class="section-text col-right">
                   <span class="key">Kubernetes</span>
                   <span class="key">Istio</span>
-                  <span class="key">Prometheus</span>
-                  <span class="key">Golang</span>
-                  <span class="key">Java</span>
                   <span class="key">DevOps</span>
-                  <span class="key">KubeEdge</span>
-                  <span class="key">IoT物联网</span>
+                  <span class="key">Prometheus</span>
+                  <span class="key">Java</span>
+                  <span class="key">Golang</span>
+                  <span class="key">Skywalking</span>
+                  <span class="key">ELK</span>
                 </div>
             </div>
             <!--
@@ -69,7 +69,7 @@
                         <li>熟练操作Docker，并熟练使用Dockerfile，制作Docker镜像等</li>
                         <li>熟练使用Ansible自动化运维</li>
                         <li>熟练使用linux操作系统，有linux环境下的开发经历</li>
-                        <li>熟悉Golang, Java编程语言, 具有相应开发经验</li>
+                        <li>熟悉Java, Golang编程语言, 具有相应开发经验</li>
                         <li>熟悉DevOps开发模式</li>
                         <li>熟悉Jenkins，能够使用Jenkins持续集成与交付</li>
                         <li>有云平台，微服务集群开发及运维管理经验</li>
@@ -77,8 +77,9 @@
                         <li>熟练使用跳板机实现服务器与外网隔离，保证服务器安全</li>
                         <li>熟悉Zabbix/Prometheus服务监控及报警(短信、微信、邮件)</li>
                         <li>熟悉阿里云产品，ECS管理及运维系统基础服务</li>
-                        <li>熟悉Spring-boot/Spring-cloud框架</li>
-                        <li>熟悉ELK日志监控</li>
+                        <li>熟悉Spring-boot框架</li>
+                        <li>熟悉ELK日志收集及分析</li>
+                        <li>熟悉Skywalking链路追踪及可视化</li>
                         <li>了解并使用KVM, VBox, VMware, Vagrant等虚拟技术</li>
                         <li>具有移动App(Android&IOS&Codova) 开发经验</li>
                     </ul>
@@ -120,8 +121,10 @@
                         <div class="col-right light">2019年06月 - 至今</div>
                     </div>
                     <ul class="desc">
-                        <li>基础架构组</li>
+                        <li>系统架构组</li>
                           <ul classs="desc">
+                            <li>负责公司的APM性能管理系统设计、开发和维护</li>
+                            <span class="desc"> 整个APM性能管理系统由prometheus+Skywalking+ELK三大组件组成，系统基于K8S集群+Istio服务网格设计。 prometheus 主要负责指标监控, 通过AlertManager告警；Skywalking负责链路追踪及可视化，实现链路异常可视化标记和告警；ELK实现日志收集和日志分析。基于这三大开源组件基础上，定制开发针对企业架构的监控告警服务，达到每一个服务能够监控到，没一条链路能够监控到，及时告警通知到相应的运维负责人和开发责任人。</span>
                             <li>使用K8S API管理Istio 路由服务IstioIngressApi(Spring)</li>
                             <span class="desc"> 控制Istio 的Ingress路由资源有：Gateway,VirtualService, DestinationRule, ServiceEntry和Sidecar(Istio1.1新增),IstioIngressApi服务是提供接口给管理平台对Istio 的Ingress资源进行增删改查功能，管理集群的网络。</span>
                             <li>日志消费聚合服务(Spring)</li>
