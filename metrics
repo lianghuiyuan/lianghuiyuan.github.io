@@ -1,0 +1,4 @@
+# HELP go_gc_duration_seconds A summary of the pause duration of garbage collection cycles.
+# TYPE go_gc_duration_seconds summary
+site_domain "www.lhy.me"
+site_domain_describe "persional web site"
